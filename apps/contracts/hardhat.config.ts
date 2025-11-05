@@ -1,5 +1,8 @@
+import "dotenv/config";
 import type { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox-viem";
+import "hardhat-deploy";
+
 
 const config: HardhatUserConfig = {
   solidity: {

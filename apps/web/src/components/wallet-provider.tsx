@@ -26,8 +26,8 @@ const wagmiConfig = createConfig({
   chains: [celo, celoAlfajores],
   connectors,
   transports: {
-    [celo.id]: http(),
-    [celoAlfajores.id]: http(),
+    [celo.id]: http({ url: process.env.NEXT_PUBLIC_SEPOLIA_RPC_URL }),
+    [celoAlfajores.id]: http({ url: process.env.NEXT_PUBLIC_ALFAJORES_RPC_URL }),
   },
   ssr: true,
 });
